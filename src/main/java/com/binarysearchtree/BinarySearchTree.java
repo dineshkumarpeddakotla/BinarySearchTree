@@ -31,4 +31,11 @@ public class BinarySearchTree<K extends Comparable<K>> {
         return current == null ? 0 : 1 + this.getSizeRecursive(current.getLeft())
                 + this.getSizeRecursive(current.getRight());
     }
+
+    @Override
+    public String toString() {
+        return "BinarySearchTree{" +
+                "root=" + root +
+                '}';
+    }
 }
