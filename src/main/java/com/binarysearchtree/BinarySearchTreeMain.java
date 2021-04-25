@@ -19,6 +19,6 @@ public class BinarySearchTreeMain {
         binarySearchTree.add(63);
         binarySearchTree.add(67);
 
-        System.out.println(binarySearchTree.toString());
+        System.out.println("Seared Key = " +binarySearchTree.searchNode(63).getKey());
     }
 }
