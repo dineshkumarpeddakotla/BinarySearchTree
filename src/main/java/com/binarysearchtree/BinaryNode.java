@@ -40,4 +40,13 @@ public class BinaryNode<K extends Comparable<K>> implements INode<K> {
     public void setLeft(INode<K> left) {
         this.left = left;
     }
+
+    @Override
+    public String toString() {
+        return "BinaryNode{" +
+                "key=" + key +
+                ",\n left=" + left +
+                ",\n right=" + right +
+                '}';
+    }
 }
