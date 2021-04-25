@@ -32,6 +32,22 @@ public class BinarySearchTree<K extends Comparable<K>> {
                 + this.getSizeRecursive(current.getRight());
     }
 
+    private INode<K> searchNodeRecursive(INode<K> currentNode, K key) {
+        if (currentNode == null) {
+            return null;
+        }
+        int comparisonResult = key.compareTo(currentNode.getKey());
+        if (comparisonResult == 0) {
+            return currentNode;
+        }
+        return comparisonResult < 0
+                ? searchNodeRecursive(currentNode.getLeft(), key)
+                : searchNodeRecursive(currentNode.getRight(), key);
+    }
+
+    public INode<K> searchNode(K key) {
+        return searchNodeRecursive(root, key);
+    }
     @Override
     public String toString() {
         return "BinarySearchTree{" +

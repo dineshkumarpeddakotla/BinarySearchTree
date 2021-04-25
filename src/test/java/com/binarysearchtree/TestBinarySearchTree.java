@@ -40,4 +40,26 @@ public class TestBinarySearchTree {
         System.out.println("Size = "+size);
         Assertions.assertEquals(13,size);
     }
+
+    @Test
+    public void whenGivenNumbersAreAddedToTreeShouldBeAbleToSearchNode(){
+        BinarySearchTree<Integer> customBinaryTree = new BinarySearchTree<>();
+        customBinaryTree.add(56);
+        customBinaryTree.add(30);
+        customBinaryTree.add(70);
+        customBinaryTree.add(22);
+        customBinaryTree.add(40);
+        customBinaryTree.add(60);
+        customBinaryTree.add(95);
+        customBinaryTree.add(11);
+        customBinaryTree.add(65);
+        customBinaryTree.add(3);
+        customBinaryTree.add(16);
+        customBinaryTree.add(63);
+        customBinaryTree.add(67);
+
+        INode<Integer> result = customBinaryTree.searchNode(63);
+        Assertions.assertEquals(63, result.getKey());
+        System.out.println("Key = " +result.getKey());
+    }
 }
